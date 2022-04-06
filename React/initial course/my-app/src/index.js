@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+
+//css
+import './index.css';
 //Nested components, React tools
 
 function BooksList(){
     return (
-        <section>
+      <section class="bookList">
           <Book />
           <Book />
           <Book />
@@ -14,8 +17,10 @@ function BooksList(){
     )
 }
 
+
+
 const Book = () => {
-  return <article>
+  return <article class="book">
     <Image></Image>
     <Title/>
     <Author/>
@@ -23,7 +28,7 @@ const Book = () => {
 
 }
 
-const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/41D3enj6JVS._SX324_BO1,204,203,200_.jpg" alt=""/>
+const Image = () => <img src="https://m.media-amazon.com/images/I/61NdJMwAThS._AC_UL320_.jpg" alt=""/>
 const Title = () => <h1>The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma</h1>
 const Author = () => <h4> Bessel van der Kolk M.D.</h4>
 
